@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Computer Science Quiz</h1>
+        
+        <div id="difficulty-container">
+            <h2>Select Difficulty Level</h2>
+            <div class="difficulty-buttons">
+                <button id="easy" class="btn difficulty-btn">Easy</button>
+                <button id="medium" class="btn difficulty-btn">Medium</button>
+                <button id="hard" class="btn difficulty-btn">Hard</button>
+            </div>
+            <button id="view-high-scores" class="btn high-scores-btn">View High Scores</button>
+        </div>
+        
+        <div class="quiz-header">
+            <div id="difficulty-display" class="hide"></div>
+            <div id="score-display">Score: <span id="score">0</span></div>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <div id="timer-container">
+                <div id="timer-bar">
+                    <div id="timer-progress"></div>
+                </div>
+                <div id="timer-display">20</div>
+            </div>
+        </div>
+        
+        <div id="question-container" class="hide">
+            <div id="question-number">Question 1 of 10</div>
+            <h2 id="question">Question text will appear here</h2>
+            <div id="answer-buttons" class="btn-grid"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="prev-btn" class="prev-btn btn hide">Previous</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+            <button id="restart-btn" class="restart-btn btn hide">Restart Quiz</button>
+        </div>
+        
+        <div id="result-container" class="hide">
+            <h2>Quiz Results</h2>
+            <p>Your score: <span id="final-score">0</span> out of <span id="total-questions">0</span></p>
+            <p id="result-message"></p>
+            
+            <div id="save-score-container">
+                <h3>Save Your Score</h3>
+                <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+                <button id="save-score-btn" class="btn save-score-btn">Save Score</button>
+            </div>
+        </div>
+        
+        <div id="high-scores-overlay" class="hide">
+            <div id="high-scores-container">
+                <h2>High Scores</h2>
+                <div class="tabs">
+                    <button class="tab-btn active" data-difficulty="easy">Easy</button>
+                    <button class="tab-btn" data-difficulty="medium">Medium</button>
+                    <button class="tab-btn" data-difficulty="hard">Hard</button>
+                </div>
+                <div id="high-scores-content">
+                    <table id="high-scores-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="high-scores-list"></tbody>
+                    </table>
+                </div>
+                <div class="high-score-buttons">
+                    <button id="close-high-scores" class="btn close-btn">Close</button>
+                    <button id="clear-high-scores" class="btn clear-btn">Clear Scores</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
