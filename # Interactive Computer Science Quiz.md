@@ -2,7 +2,7 @@
 
 A dynamic, feature-rich quiz application focused on computer science topics with multiple difficulty levels, timed questions, and persistent high scores.
 
-![Quiz Preview](quiz-preview.png)
+
 
 ## Features
 
